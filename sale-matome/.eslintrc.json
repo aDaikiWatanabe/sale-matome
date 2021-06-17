@@ -15,8 +15,7 @@
     "prettier"
   ],
   "plugins": ["react",
-    "@typescript-eslint",
-    "prettier"],
+    "@typescript-eslint","prettier"],
   "settings": {
     "react": {
       "version": "detect"
