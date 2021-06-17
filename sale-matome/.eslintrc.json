@@ -18,6 +18,15 @@
       "version": "detect"
     }
   },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": false
+      }
+    ]
+  },
   "extends": [
     "eslint:recommended",
     "prettier",
