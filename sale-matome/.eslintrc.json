@@ -9,9 +9,15 @@
       "jsx": true
     }
   },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "plugins": [
     "react",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "settings": {
     "react": {
@@ -26,10 +32,5 @@
         "semi": false
       }
     ]
-  },
-  "extends": [
-    "eslint:recommended",
-    "prettier",
-    "plugin:@typescript-eslint/recommended"
-  ]
+  }
 }
