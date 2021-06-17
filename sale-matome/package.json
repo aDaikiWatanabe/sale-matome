@@ -26,7 +26,7 @@
     "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
     "lint:fix": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
     "prettier:fix": "prettier --write .",
-    "precommit": "eslint . --ext .js,.ts,.jsx,.tsx"
+    "precommit": "eslint . --ext .js,.ts,.jsx,.tsx --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +53,12 @@
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-react": "^7.24.0",
     "prettier": "^2.3.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
