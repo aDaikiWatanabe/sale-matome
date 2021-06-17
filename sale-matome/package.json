@@ -31,7 +31,7 @@
     "prepare": "cd ../ && husky install"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx,json}": [
+    "*.{js,ts,jsx,tsx}": [
       "yarn prettier:fix",
       "yarn lint:fix"
     ]
@@ -42,9 +42,6 @@
       "react-app/jest"
     ]
   },
-  "eslintIgnore": [
-    "/.eslintrc.json"
-  ],
   "browserslist": {
     "production": [
       ">0.2%",
