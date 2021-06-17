@@ -30,12 +30,21 @@
     "prettier:fix": "prettier --write .",
     "prepare": "cd ../ && husky install"
   },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,json}": [
+      "yarn prettier:fix",
+      "yarn lint:fix"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
+  "eslintIgnore": [
+    "/.eslintrc.json"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
