@@ -12,10 +12,9 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:json/recommended",
     "prettier"
   ],
-  "plugins": ["react", "json", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "settings": {
     "react": {
       "version": "detect"
