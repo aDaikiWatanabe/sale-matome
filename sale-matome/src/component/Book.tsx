@@ -1,6 +1,6 @@
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, Typography } from '@material-ui/core'
 
-export type Book = {
+export type BookType = {
   title: string
   author: string
   price: number
@@ -9,7 +9,7 @@ export type Book = {
 }
 
 type Props = {
-  book: Book
+  book: BookType
 }
 
 const Book: React.FC<Props> = props => {
