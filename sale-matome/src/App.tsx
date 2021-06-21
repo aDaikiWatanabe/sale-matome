@@ -1,13 +1,16 @@
 import './App.css'
 import Header from './component/Header'
+import BookList from './component/BookList'
+import { Box } from '@material-ui/core'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
+    <Box className="App">
       <Header />
-      Hello, World!
-    </div>
+      <Box className="Body" mt="8rem" mx="auto">
+        <BookList />
+      </Box>
+    </Box>
   )
 }
-
 export default App
