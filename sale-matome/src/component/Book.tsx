@@ -1,6 +1,6 @@
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, Typography } from '@material-ui/core'
 
-type Props = {
+export type Book = {
   title: string
   author: string
   price: number
@@ -8,29 +8,33 @@ type Props = {
   tag: string[]
 }
 
+type Props = {
+  book: Book
+}
+
 const Book: React.FC<Props> = props => {
-  const { title, author, price, purchaseLink, tag } = props
+  const { book } = props
 
   return (
     <Box mx="auto" bgcolor="background.paper">
       <Card>
-        <CardActionArea href={purchaseLink}>
+        <CardActionArea href={book.purchaseLink}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {title}
+              {book.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              作者:{author}
+              作者:{book.author}
               <br />
-              価格:{price}
+              価格:{book.price}
               <br />
               {/* TODO: 各タグにそのタグのフィルタした結果の表示をリンクさせる。 */}
-              ジャンル:{tag.join(', ')}
+              ジャンル:{book.tag.join(', ')}
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary" href={purchaseLink}>
+          <Button size="small" color="primary" href={book.purchaseLink}>
             作品詳細
           </Button>
         </CardActions>
