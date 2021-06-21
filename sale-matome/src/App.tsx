@@ -8,7 +8,7 @@ const App: React.FC = () => {
     <Box className="App">
       <Header />
       <Box className="Body" mt="8rem" mx="auto">
-        <BookList></BookList>
+        <BookList />
       </Box>
     </Box>
   )
