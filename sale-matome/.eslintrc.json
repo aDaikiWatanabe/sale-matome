@@ -25,7 +25,12 @@
       "error",
       {
         "singleQuote": true,
-        "semi": false
+        "semi": false,
+        "arrowParens": "avoid",
+        "endOfLine": "lf",
+        "printWidth": 120,
+        "trailingComma": "es5",
+        "tabWidth": 2
       }
     ]
   }
