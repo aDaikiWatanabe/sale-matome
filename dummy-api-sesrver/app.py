@@ -16,302 +16,302 @@ def app(environ, start_response):
     json_data = json.dumps([
       {
         "data": {
-          "PurchaseLink": "https://book.dmm.com/detail/b900rkds02366/",
+          "purchaseLink": "https://book.dmm.com/detail/b900rkds02366/",
           "title": "ブルーピリオド(1)",
-          "Author": "山口つばさ",
-          "Price": 660,
-          "ImageLink": None,
-          "Tag": ["青年コミック", "ヒューマンドラマ"],
+          "author": "山口つばさ",
+          "price": 660,
+          "imageLink": None,
+          "tag": ["青年コミック", "ヒューマンドラマ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "https://book.dmm.com/detail/b999asqex03051/",
+          "purchaseLink": "https://book.dmm.com/detail/b999asqex03051/",
           "title": "薬屋のひとりごと 1巻",
-          "Author": "ねこクラゲ  七緒一綺  しのとうこ  日向夏（ヒーロー文庫/主婦の友社刊）",
-          "Price": 618,
-          "ImageLink": None,
-          "Tag": ["少女コミック", "ミステリー・サスペンス", "歴史・時代劇・戦記"],
+          "author": "ねこクラゲ  七緒一綺  しのとうこ  日向夏（ヒーロー文庫/主婦の友社刊）",
+          "price": 618,
+          "imageLink": None,
+          "tag": ["少女コミック", "ミステリー・サスペンス", "歴史・時代劇・戦記"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "https://book.dmm.com/detail/b999asqex03506/",
+          "purchaseLink": "https://book.dmm.com/detail/b999asqex03506/",
           "title": "ブルーピリオド(1)",
-          "Author": "Roy 蘭々 りりんら",
-          "Price": 309,
-          "ImageLink": None,
-          "Tag": ["少年コミック", "日常", "異世界系", "ルポ・エッセイ・自叙伝", "ファンタジー"],
+          "author": "Roy 蘭々 りりんら",
+          "price": 309,
+          "imageLink": None,
+          "tag": ["少年コミック", "日常", "異世界系", "ルポ・エッセイ・自叙伝", "ファンタジー"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
       {
         "data": {
-          "PurchaseLink": "http://example.com",
+          "purchaseLink": "http://example.com",
           "title": "ブルーピリオド(1)",
-          "Author": "John Do",
-          "Price": 2300,
-          "ImageLink": None,
-          "Tag": ["SF", "ラブコメ"],
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
         }
       },
     ])
