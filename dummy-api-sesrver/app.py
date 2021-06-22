@@ -2,6 +2,7 @@ from wsgiref.simple_server import make_server
 
 import json
 
+PORT=4000
 
 def app(environ, start_response):
   status = '200 OK'
@@ -319,6 +320,6 @@ def app(environ, start_response):
     start_response(status, headers)
     return [json.dumps({'message':'hoge'}).encode("utf-8")]
 
-with make_server('', 3000, app) as httpd:
-  print("Serving on port 3000...")
+with make_server('', PORT, app) as httpd:
+  print("Serving on port " + PORT + "...")
   httpd.serve_forever()
