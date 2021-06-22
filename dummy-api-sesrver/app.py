@@ -321,5 +321,5 @@ def app(environ, start_response):
     return [json.dumps({'message':'hoge'}).encode("utf-8")]
 
 with make_server('', PORT, app) as httpd:
-  print("Serving on port 3000...")
+  print("Serving on port " + PORT + "...")
   httpd.serve_forever()
