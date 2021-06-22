@@ -8,19 +8,21 @@ import Book, { BookType } from './Book'
 // 	search: string
 // }
 
+let fullBookList: BookType[] = []
+axios
+  .get(`${process.env.REACT_APP_API_SERVER}/book`)
+  .then(response => (fullBookList = response.data.map((x: any) => x.data)))
+  .catch(error => console.log(error))
+
 const BookList: React.FC = () => {
-  const [bookList, setBookList] = useState<BookType[]>([])
-  // 最初だけ更新する
+  const [currentBookList, setCurrentBookList] = useState<BookType[]>([])
   useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_API_SERVER}/book`)
-      .then(response => setBookList(response.data.map((x: any) => x.data)))
-      .catch(error => console.log(error))
+    setCurrentBookList(fullBookList)
   }, [])
 
   return (
     <>
-      {bookList.map(book => (
+      {currentBookList.map(book => (
         // TODO: keyの追加。データに入ってるユニークな値を使いたい。今はダミーからのレスポンスにそれが入ってない。
         <Book book={book} />
       ))}
