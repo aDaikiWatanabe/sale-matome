@@ -1,16 +1,26 @@
+import { siteFilterType } from '../models/VisibilityFilter'
+
 export const Type = {
   SET_SEARCH_FILTER: 'SET_SEARCH_FILTER',
+  SET_SITE_FILTER: 'SET_SITE_FILTER',
   SET_FILTER: 'SET_FILTER',
 } as const
 
-export const setFilter = (filter: string) => ({
+type ActionCreate<TP> = (payload: TP) => { type: string; payload: TP }
+
+export const setFilter: ActionCreate<string> = (filter: string) => ({
   type: Type.SET_FILTER,
-  payload: { filter },
+  payload: filter,
 })
 
-export const setSearchFilter = (searchFilter: string) => ({
+export const setSearchFilter: ActionCreate<string> = (searchFilter: string) => ({
   type: Type.SET_SEARCH_FILTER,
-  payload: { searchFilter },
+  payload: searchFilter,
+})
+
+export const setSiteFilter: ActionCreate<siteFilterType> = (siteFilter: siteFilterType) => ({
+  type: Type.SET_SITE_FILTER,
+  payload: siteFilter,
 })
 
 export type VisibilityFilterAction = ReturnType<typeof setFilter> | ReturnType<typeof setSearchFilter>
