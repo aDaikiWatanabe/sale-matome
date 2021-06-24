@@ -2,7 +2,10 @@ import { Box, InputBase, AppBar, Toolbar, FormControl, MenuItem, Typography, Sel
 import { makeStyles, Theme, createStyles, fade } from '@material-ui/core/styles'
 import SearchIcon from '@material-ui/icons/Search'
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { setSearchFilter } from '../actions/visibilityFilter'
 
+// TODO: styleのファイルを別にする
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     search: {
@@ -64,11 +67,15 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 const SearchBar: React.FC = () => {
+  const dispatch = useDispatch()
   const classes = useStyles()
   const [siteFilter, setSiteFilter] = useState('全て')
   const [sortValue, setSortValue] = useState('default')
   const [sortOrder, setSortOrder] = useState('ascending')
 
+  const handleSearchInputChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    dispatch(setSearchFilter(event.target.value as string))
+  }
   const handleFilterChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setSiteFilter(event.target.value as string)
   }
@@ -92,6 +99,7 @@ const SearchBar: React.FC = () => {
               root: classes.inputRoot,
               input: classes.inputInput,
             }}
+            onChange={handleSearchInputChange}
           />
         </Box>
         <Box className={classes.select}>
