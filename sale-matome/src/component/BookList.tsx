@@ -12,6 +12,7 @@ const BookList: React.FC = () => {
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_SERVER}/book`)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .then(response => dispatch(setBooks(response.data.map((x: any) => x.data))))
       .catch(error => console.log(error))
   }, [])
