@@ -72,7 +72,6 @@ const SearchBar: React.FC = () => {
   const selectedVisibilityFilter = useSelector(getVisibilityFilter)
   const dispatch = useDispatch()
   const classes = useStyles()
-  // const [siteFilter, setSiteFilter] = useState('all')
   const [sortValue, setSortValue] = useState('default')
   const [sortOrder, setSortOrder] = useState('ascending')
 
@@ -81,7 +80,6 @@ const SearchBar: React.FC = () => {
   }
   const handleFilterChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     dispatch(setSiteFilter(event.target.value as siteFilterType))
-    // setSiteFilter(event.target.value as string)
   }
   const handleSortValueChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setSortValue(event.target.value as string)
