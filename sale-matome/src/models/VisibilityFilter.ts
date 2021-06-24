@@ -1,4 +1,8 @@
+import { siteType } from './siteType'
+
+export type siteFilterType = 'all' | siteType
+
 export interface VisibilityFilter {
-  siteFilter: 'all' | 'kindle' | 'dmm' | 'rakuten'
+  siteFilter: siteFilterType
   searchFilter: string
 }

@@ -8,5 +8,10 @@ export const getBooks = (state: RootState) => {
 
 export const getBooksByVisibilityFilter = (state: RootState) => {
   const allBooks = getBooks(state)
-  return allBooks.filter((book: Book) => book.title.includes((state.visibilityFilter as VisibilityFilter).searchFilter))
+  const filter = state.visibilityFilter as VisibilityFilter
+  if (filter.siteFilter === 'all') {
+    return allBooks.filter((book: Book) => book.title.includes(filter.searchFilter))
+  } else {
+    return allBooks.filter((book: Book) => book.title.includes(filter.searchFilter) && book.site === filter.siteFilter)
+  }
 }

@@ -16,7 +16,9 @@ def app(environ, start_response):
     json_data = json.dumps([
       {
         "data": {
+          "id": "1",
           "purchaseLink": "https://book.dmm.com/detail/b900rkds02366/",
+          "site": "dmm",
           "title": "ブルーピリオド(1)",
           "author": "山口つばさ",
           "price": 660,
@@ -26,7 +28,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "2",
           "purchaseLink": "https://book.dmm.com/detail/b999asqex03051/",
+          "site": "dmm",
           "title": "薬屋のひとりごと 1巻",
           "author": "ねこクラゲ  七緒一綺  しのとうこ  日向夏（ヒーロー文庫/主婦の友社刊）",
           "price": 618,
@@ -36,8 +40,10 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "3",
           "purchaseLink": "https://book.dmm.com/detail/b999asqex03506/",
-          "title": "ブルーピリオド(1)",
+          "site": "dmm",
+          "title": "神様に拾われたなんとかかんとか2",
           "author": "Roy 蘭々 りりんら",
           "price": 309,
           "imageLink": None,
@@ -46,7 +52,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "4",
           "purchaseLink": "http://example.com",
+          "site": "dmm",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -56,7 +64,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "5",
           "purchaseLink": "http://example.com",
+          "site": "dmm",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -66,7 +76,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "6",
           "purchaseLink": "http://example.com",
+          "site": "dmm",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -76,7 +88,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "7",
           "purchaseLink": "http://example.com",
+          "site": "dmm",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -86,7 +100,81 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "8",
           "purchaseLink": "http://example.com",
+          "site": "dmm",
+          "title": "dmmブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "9",
+          "purchaseLink": "http://example.com",
+          "site": "dmm",
+          "title": "dmmブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "10",
+          "purchaseLink": "http://example.com",
+          "site": "dmm",
+          "title": "dmmブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "11",
+          "purchaseLink": "http://example.com",
+          "site": "kindle",
+          "title": "kindleブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "12",
+          "purchaseLink": "http://example.com",
+          "site": "kindle",
+          "title": "kindleブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "13",
+          "purchaseLink": "http://example.com",
+          "site": "kindle",
+          "title": "kindleブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "14",
+          "purchaseLink": "http://example.com",
+          "site": "kindle",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -96,7 +184,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "15",
           "purchaseLink": "http://example.com",
+          "site": "kindle",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -106,7 +196,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "16",
           "purchaseLink": "http://example.com",
+          "site": "kindle",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -116,7 +208,21 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "17",
           "purchaseLink": "http://example.com",
+          "site": "kindle",
+          "title": "kindleブルーピリオド(1)",
+          "author": "John kindle Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "18",
+          "purchaseLink": "http://example.com",
+          "site": "kindle",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -126,7 +232,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "19",
           "purchaseLink": "http://example.com",
+          "site": "kindle",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -136,7 +244,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "20",
           "purchaseLink": "http://example.com",
+          "site": "kindle",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -146,7 +256,57 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "21",
           "purchaseLink": "http://example.com",
+          "site": "rakuten",
+          "title": "rakutenブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "22",
+          "purchaseLink": "http://example.com",
+          "site": "rakuten",
+          "title": "rakutenブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "23",
+          "purchaseLink": "http://example.com",
+          "site": "rakuten",
+          "title": "rakutenブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "24",
+          "purchaseLink": "http://example.com",
+          "site": "rakuten",
+          "title": "rakutenブルーピリオド(1)",
+          "author": "John Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "25",
+          "purchaseLink": "http://example.com",
+          "site": "rakuten",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -156,7 +316,21 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "26",
           "purchaseLink": "http://example.com",
+          "site": "rakuten",
+          "title": "ブルーピリオド(1)",
+          "author": "John rakuten Do",
+          "price": 2300,
+          "imageLink": None,
+          "tag": ["SF", "ラブコメ"],
+        }
+      },
+      {
+        "data": {
+          "id": "27",
+          "purchaseLink": "http://example.com",
+          "site": "rakuten",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -166,7 +340,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "28",
           "purchaseLink": "http://example.com",
+          "site": "rakuten",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -176,7 +352,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "29",
           "purchaseLink": "http://example.com",
+          "site": "rakuten",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,
@@ -186,127 +364,9 @@ def app(environ, start_response):
       },
       {
         "data": {
+          "id": "30",
           "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "purchaseLink": "http://example.com",
+          "site": "rakuten",
           "title": "ブルーピリオド(1)",
           "author": "John Do",
           "price": 2300,

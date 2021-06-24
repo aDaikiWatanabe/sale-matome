@@ -2,8 +2,10 @@ import { Box, InputBase, AppBar, Toolbar, FormControl, MenuItem, Typography, Sel
 import { makeStyles, Theme, createStyles, fade } from '@material-ui/core/styles'
 import SearchIcon from '@material-ui/icons/Search'
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { setSearchFilter } from '../actions/visibilityFilter'
+import { useDispatch, useSelector } from 'react-redux'
+import { setSearchFilter, setSiteFilter } from '../actions/visibilityFilter'
+import { siteFilterType } from '../models/VisibilityFilter'
+import { getVisibilityFilter } from '../selectors/visibilityFilter'
 
 // TODO: styleのファイルを別にする
 const useStyles = makeStyles((theme: Theme) =>
@@ -67,9 +69,9 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 const SearchBar: React.FC = () => {
+  const selectedVisibilityFilter = useSelector(getVisibilityFilter)
   const dispatch = useDispatch()
   const classes = useStyles()
-  const [siteFilter, setSiteFilter] = useState('全て')
   const [sortValue, setSortValue] = useState('default')
   const [sortOrder, setSortOrder] = useState('ascending')
 
@@ -77,7 +79,7 @@ const SearchBar: React.FC = () => {
     dispatch(setSearchFilter(event.target.value as string))
   }
   const handleFilterChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setSiteFilter(event.target.value as string)
+    dispatch(setSiteFilter(event.target.value as siteFilterType))
   }
   const handleSortValueChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setSortValue(event.target.value as string)
@@ -109,13 +111,13 @@ const SearchBar: React.FC = () => {
               disableUnderline
               className={classes.selectLabel}
               id="site-filter-select"
-              value={siteFilter}
+              value={selectedVisibilityFilter.siteFilter}
               onChange={handleFilterChange}
             >
-              <MenuItem value="全て">全て</MenuItem>
-              <MenuItem value="Kindle">Kindle</MenuItem>
-              <MenuItem value="DMMブックス">DMMブックス</MenuItem>
-              <MenuItem value="楽天Kobo">楽天Kobo</MenuItem>
+              <MenuItem value="all">全て</MenuItem>
+              <MenuItem value="kindle">Kindle</MenuItem>
+              <MenuItem value="dmm">DMMブックス</MenuItem>
+              <MenuItem value="rakuten">楽天Kobo</MenuItem>
             </Select>
           </FormControl>
         </Box>
