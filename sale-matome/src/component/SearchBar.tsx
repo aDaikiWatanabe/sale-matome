@@ -68,7 +68,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const SearchBar: React.FC = () => {
   const dispatch = useDispatch()
-
   const classes = useStyles()
 
   const [siteFilter, setSiteFilter] = useState('全て')
