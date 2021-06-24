@@ -76,7 +76,6 @@ const SearchBar: React.FC = () => {
   const handleSearchInputChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     dispatch(setSearchFilter(event.target.value as string))
   }
-
   const handleFilterChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setSiteFilter(event.target.value as string)
   }
