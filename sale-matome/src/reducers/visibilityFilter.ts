@@ -6,6 +6,7 @@ const initVisibilityFilter: VisibilityFilter = {
   searchFilter: '',
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const visibilityFilter = (state: VisibilityFilter = initVisibilityFilter, action: VisibilityFilterAction) => {
   switch (action.type) {
     case Type.SET_SEARCH_FILTER:
