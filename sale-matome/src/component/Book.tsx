@@ -1,6 +1,5 @@
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, Typography } from '@material-ui/core'
-import { makeStyles, Theme, createStyles, fade } from '@material-ui/core/styles'
-import { classicNameResolver } from 'typescript'
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 
 export type BookType = {
   title: string
