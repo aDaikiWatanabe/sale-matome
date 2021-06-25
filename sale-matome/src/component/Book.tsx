@@ -1,4 +1,6 @@
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, Typography } from '@material-ui/core'
+import { makeStyles, Theme, createStyles, fade } from '@material-ui/core/styles'
+import { classicNameResolver } from 'typescript'
 
 export type BookType = {
   title: string
@@ -12,12 +14,21 @@ type Props = {
   book: BookType
 }
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    cardRoot: {
+      marginBottom: theme.spacing(2),
+    },
+  })
+)
+
 const Book: React.FC<Props> = props => {
   const { book } = props
+  const classes = useStyles()
 
   return (
     <Box mx="auto" bgcolor="background.paper">
-      <Card>
+      <Card className={classes.cardRoot}>
         <CardActionArea href={book.purchaseLink}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
