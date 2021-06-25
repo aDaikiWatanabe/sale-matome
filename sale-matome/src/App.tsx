@@ -3,6 +3,7 @@ import Header from './component/Header'
 import BookList from './component/BookList'
 import SearchBar from './component/SearchBar'
 import { Box, Paper } from '@material-ui/core'
+import BackToTopButton from './component/BackToTopButton'
 
 //TODO: styleで指定する
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <BookList />
         </Paper>
       </Box>
+      <BackToTopButton />
     </Box>
   )
 }

@@ -87,7 +87,7 @@ const SearchBar: React.FC = () => {
 
   return (
     <AppBar position="static">
-      <Toolbar>
+      <Toolbar id="back-to-top-anchor">
         <Box className={classes.search}>
           <Box className={classes.searchIcon}>
             <SearchIcon />
