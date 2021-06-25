@@ -1,17 +1,14 @@
 import { Book } from '../models/Book'
 
 export const Type = {
-  UPDATE_BOOK: 'UPDATE_BOOK',
   SET_BOOKS: 'SET_BOOKS',
 } as const
 
-export const updateBook = () => ({
-  type: Type.UPDATE_BOOK,
-})
+type ActionCreate<TP> = (payload: TP) => { type: string; payload: TP }
 
-export const setBooks = (books: Book[]) => ({
+export const setBooks: ActionCreate<Book[]> = (books: Book[]) => ({
   type: Type.SET_BOOKS,
-  payload: { books },
+  payload: books,
 })
 
-export type BookAction = ReturnType<typeof updateBook> | ReturnType<typeof setBooks>
+export type BookAction = ReturnType<typeof setBooks>

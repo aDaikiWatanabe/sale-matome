@@ -1,17 +1,13 @@
-import { siteFilterType } from '../models/VisibilityFilter'
+import { siteFilterType, sortValueType, sortOrderType } from '../models/VisibilityFilter'
 
 export const Type = {
   SET_SEARCH_FILTER: 'SET_SEARCH_FILTER',
   SET_SITE_FILTER: 'SET_SITE_FILTER',
-  SET_FILTER: 'SET_FILTER',
+  SET_SORT_VALUE: 'SET_SORT_VALUE',
+  SET_SORT_ORDER: 'SET_SORT_ORDER',
 } as const
 
 type ActionCreate<TP> = (payload: TP) => { type: string; payload: TP }
-
-export const setFilter: ActionCreate<string> = (filter: string) => ({
-  type: Type.SET_FILTER,
-  payload: filter,
-})
 
 export const setSearchFilter: ActionCreate<string> = (searchFilter: string) => ({
   type: Type.SET_SEARCH_FILTER,
@@ -23,4 +19,17 @@ export const setSiteFilter: ActionCreate<siteFilterType> = (siteFilter: siteFilt
   payload: siteFilter,
 })
 
-export type VisibilityFilterAction = ReturnType<typeof setFilter> | ReturnType<typeof setSearchFilter>
+export const setSortValue: ActionCreate<sortValueType> = (sortValue: sortValueType) => ({
+  type: Type.SET_SORT_VALUE,
+  payload: sortValue,
+})
+
+export const setSortOrder: ActionCreate<sortOrderType> = (sortOrder: sortOrderType) => ({
+  type: Type.SET_SORT_ORDER,
+  payload: sortOrder,
+})
+
+export type VisibilityFilterAction =
+  | ReturnType<typeof setSearchFilter>
+  | ReturnType<typeof setSortValue>
+  | ReturnType<typeof setSortOrder>

@@ -1,10 +1,9 @@
 import { Box, InputBase, AppBar, Toolbar, FormControl, MenuItem, Typography, Select } from '@material-ui/core'
 import { makeStyles, Theme, createStyles, fade } from '@material-ui/core/styles'
 import SearchIcon from '@material-ui/icons/Search'
-import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setSearchFilter, setSiteFilter } from '../actions/visibilityFilter'
-import { siteFilterType } from '../models/VisibilityFilter'
+import { setSearchFilter, setSiteFilter, setSortValue, setSortOrder } from '../actions/visibilityFilter'
+import { siteFilterType, sortOrderType, sortValueType } from '../models/VisibilityFilter'
 import { getVisibilityFilter } from '../selectors/visibilityFilter'
 
 // TODO: styleのファイルを別にする
@@ -72,8 +71,6 @@ const SearchBar: React.FC = () => {
   const selectedVisibilityFilter = useSelector(getVisibilityFilter)
   const dispatch = useDispatch()
   const classes = useStyles()
-  const [sortValue, setSortValue] = useState('default')
-  const [sortOrder, setSortOrder] = useState('ascending')
 
   const handleSearchInputChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     dispatch(setSearchFilter(event.target.value as string))
@@ -82,10 +79,10 @@ const SearchBar: React.FC = () => {
     dispatch(setSiteFilter(event.target.value as siteFilterType))
   }
   const handleSortValueChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setSortValue(event.target.value as string)
+    dispatch(setSortValue(event.target.value as sortValueType))
   }
   const handleSortOrderChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setSortOrder(event.target.value as string)
+    dispatch(setSortOrder(event.target.value as sortOrderType))
   }
 
   return (
@@ -122,13 +119,13 @@ const SearchBar: React.FC = () => {
           </FormControl>
         </Box>
         <Box className={classes.select}>
-          <Typography className={classes.selectTitle}>ソート種類:</Typography>
+          <Typography className={classes.selectTitle}>ソート:</Typography>
           <FormControl component="fieldset">
             <Select
               disableUnderline
               className={classes.selectLabel}
               id="sort-value-select"
-              value={sortValue}
+              value={selectedVisibilityFilter.sortValue}
               onChange={handleSortValueChange}
             >
               <MenuItem value="default">デフォルト</MenuItem>
@@ -137,19 +134,16 @@ const SearchBar: React.FC = () => {
               <MenuItem value="author">作者</MenuItem>
             </Select>
           </FormControl>
-        </Box>
-        <Box className={classes.select}>
-          <Typography className={classes.selectTitle}>ソート順:</Typography>
           <FormControl component="fieldset">
             <Select
               disableUnderline
               className={classes.selectLabel}
               id="sort-value-select"
-              value={sortOrder}
+              value={selectedVisibilityFilter.sortOrder}
               onChange={handleSortOrderChange}
             >
-              <MenuItem value="descending">降順</MenuItem>
-              <MenuItem value="ascending">昇順</MenuItem>
+              <MenuItem value={-1}>降順</MenuItem>
+              <MenuItem value={1}>昇順</MenuItem>
             </Select>
           </FormControl>
         </Box>
