@@ -101,6 +101,7 @@ const SearchBar: React.FC = () => {
             onChange={handleSearchInputChange}
           />
         </Box>
+        <div style={{ flexGrow: 1 }}></div>
         <Box className={classes.select}>
           <Typography className={classes.selectTitle}>表示サイト:</Typography>
           <FormControl component="fieldset">
