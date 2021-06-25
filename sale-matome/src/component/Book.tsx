@@ -1,16 +1,17 @@
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, Typography } from '@material-ui/core'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
-
-export type BookType = {
-  title: string
-  author: string
-  price: number
-  purchaseLink: string
-  tag: string[]
-}
+import { Book } from '../models/Book'
+// export type BookType = {
+//   title: string
+//   authors: string[]
+//   price: number
+//   purchaseLink: string
+//   tag: string[]
+// }
 
 type Props = {
-  book: BookType
+  // book: BookType
+  book: Book
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const Book: React.FC<Props> = props => {
+const BookCard: React.FC<Props> = props => {
   const { book } = props
   const classes = useStyles()
 
@@ -33,22 +34,17 @@ const Book: React.FC<Props> = props => {
               {book.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              作者:{book.author}
+              作者:{`${book.authors[0]}${book.authors.length > 1 ? ' 他' : ''}`}
               <br />
-              価格:{book.price}
+              価格:{book.price}円
               <br />
               {/* TODO: 各タグにそのタグのフィルタした結果の表示をリンクさせる。 */}
               ジャンル:{book.tag.join(', ')}
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary" href={book.purchaseLink}>
-            作品詳細
-          </Button>
-        </CardActions>
       </Card>
     </Box>
   )
 }
-export default Book
+export default BookCard

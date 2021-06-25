@@ -30,10 +30,10 @@ export const getBooksByVisibilityFilter = (state: RootState) => {
           }
           return 0
         case 'author':
-          if (a.author < b.author) {
+          if (a.authors < b.authors) {
             return -1 * filter.sortOrder
           }
-          if (a.author > b.author) {
+          if (a.authors > b.authors) {
             return 1 * filter.sortOrder
           }
           return 0
