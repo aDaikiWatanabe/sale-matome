@@ -13,11 +13,10 @@ type Props = {
   book: BookType
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    cardRoot: {
-      marginBottom: theme.spacing(2),
-    },
+    cardRoot: {},
   })
 )
 
