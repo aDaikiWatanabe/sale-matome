@@ -9,7 +9,6 @@ interface Props {
    * You won't need it on your project.
    */
   window?: () => Window
-  // children: React.ReactElement
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -23,7 +22,6 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 const BackToTopButton: React.FC<Props> = (props: Props) => {
-  // const { children, window } = props
   const { window } = props
   const classes = useStyles()
 
