@@ -39,7 +39,7 @@ const BookList: React.FC = () => {
     <Grid container className={classes.root} spacing={2} justify="center">
       {filteredBooks.map(book => (
         // TODO: keyの追加。データに入ってるユニークな値を使いたい。今はダミーからのレスポンスにそれが入ってない。
-        <Grid xs={12} md={4} lg={3} item key={`book-list-item-${book.id}`} className={classes.item}>
+        <Grid xs={12} sm={6} md={4} lg={3} item key={`book-list-item-${book.id}`} className={classes.item}>
           <Book book={book} />
         </Grid>
       ))}
