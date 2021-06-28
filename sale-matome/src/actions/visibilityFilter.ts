@@ -2,6 +2,7 @@ import { siteFilterType, sortValueType, sortOrderType } from '../models/Visibili
 
 export const Type = {
   SET_SEARCH_FILTER: 'SET_SEARCH_FILTER',
+  SET_AUTHOR_FILTER: 'SET_AUTHOR_FILTER',
   SET_SITE_FILTER: 'SET_SITE_FILTER',
   SET_SORT_VALUE: 'SET_SORT_VALUE',
   SET_SORT_ORDER: 'SET_SORT_ORDER',
@@ -14,6 +15,11 @@ type ActionCreate<TP> = (payload: TP) => { type: string; payload: TP }
 export const setSearchFilter: ActionCreate<string> = (searchFilter: string) => ({
   type: Type.SET_SEARCH_FILTER,
   payload: searchFilter,
+})
+
+export const setAuthorFilter: ActionCreate<string> = (searchAuthorFilter: string) => ({
+  type: Type.SET_AUTHOR_FILTER,
+  payload: searchAuthorFilter,
 })
 
 export const setSiteFilter: ActionCreate<siteFilterType> = (siteFilter: siteFilterType) => ({
@@ -43,6 +49,7 @@ export const removeTagFilter: ActionCreate<string> = (tag: string) => ({
 
 export type VisibilityFilterAction =
   | ReturnType<typeof setSearchFilter>
+  | ReturnType<typeof setAuthorFilter>
   | ReturnType<typeof setSortValue>
   | ReturnType<typeof setSortOrder>
   | ReturnType<typeof addTagFilter>

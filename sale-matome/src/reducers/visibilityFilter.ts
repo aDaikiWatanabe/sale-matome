@@ -15,6 +15,8 @@ const visibilityFilter = (state: VisibilityFilter = initVisibilityFilter, action
   switch (action.type) {
     case Type.SET_SEARCH_FILTER:
       return { ...state, searchFilter: action.payload }
+    case Type.SET_AUTHOR_FILTER:
+      return { ...state, searchAuthorFilter: action.payload }
     case Type.SET_SITE_FILTER:
       return { ...state, siteFilter: action.payload }
     case Type.SET_SORT_VALUE:

@@ -12,6 +12,7 @@ import {
   setSortOrder,
   addTagFilter,
   removeTagFilter,
+  setAuthorFilter,
 } from '../actions/visibilityFilter'
 import { siteFilterType, sortOrderType, sortValueType } from '../models/VisibilityFilter'
 import { getBooks } from '../selectors/book'
@@ -97,6 +98,9 @@ const FilterBox: React.FC = () => {
   const handleSearchInputChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     dispatch(setSearchFilter(event.target.value as string))
   }
+  const handleAuthorSearchInputChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    dispatch(setAuthorFilter(event.target.value as string))
+  }
   const handleFilterChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     dispatch(setSiteFilter(event.target.value as siteFilterType))
   }
@@ -131,6 +135,21 @@ const FilterBox: React.FC = () => {
           }}
           value={selectedVisibilityFilter.searchFilter}
           onChange={handleSearchInputChange}
+        />
+      </Box>
+      作者名：
+      <Box className={classes.search}>
+        <Box className={classes.searchIcon}>
+          <SearchIcon />
+        </Box>
+        <InputBase
+          placeholder="絞り込み ..."
+          classes={{
+            root: classes.inputRoot,
+            input: classes.inputInput,
+          }}
+          value={selectedVisibilityFilter.searchAuthorFilter}
+          onChange={handleAuthorSearchInputChange}
         />
       </Box>
       <Box className={classes.select}>
