@@ -10,5 +10,5 @@ export interface VisibilityFilter {
   searchAuthorFilter: string
   sortValue: sortValueType
   sortOrder: sortOrderType
-  tagFilter: string[]
+  tagFilter: Set<string>
 }
