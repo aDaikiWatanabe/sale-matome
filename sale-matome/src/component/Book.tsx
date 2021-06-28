@@ -1,17 +1,8 @@
-import { Box, Button, Card, CardActionArea, CardActions, CardContent, Typography } from '@material-ui/core'
+import { Box, Card, CardActionArea, CardContent, Typography } from '@material-ui/core'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
-import { bool } from 'prop-types'
 import { Book } from '../models/Book'
-// export type BookType = {
-//   title: string
-//   authors: string[]
-//   price: number
-//   purchaseLink: string
-//   tag: string[]
-// }
 
 type Props = {
-  // book: BookType
   book: Book
 }
 
@@ -19,6 +10,22 @@ type Props = {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     cardRoot: {},
+    cardActionArea: {
+      padding: theme.spacing(2),
+    },
+    bookTitle: {
+      height: '5rem',
+    },
+    bookAuthor: {},
+    bookTag: {
+      height: '3rem',
+    },
+    bookPrice: {
+      backgroundColor: theme.palette.primary.light,
+      width: '6em',
+      color: theme.palette.primary.contrastText,
+      fontSize: '1.3rem',
+    },
   })
 )
 
@@ -37,23 +44,30 @@ const BookCard: React.FC<Props> = props => {
       <Card className={classes.cardRoot}>
         <CardActionArea href={book.purchaseLink}>
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {book.title.length > threshold.title ? book.title.slice(0, threshold.title) + '...' : book.title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              作者:
-              {`${author.length > threshold.author ? author.slice(0, threshold.author) + '...' : author}${
-                book.authors.length > 1 ? ' 他' : ''
-              }`}
-              <br />
-              価格:{book.price}円
-              <br />
+            <Box className={classes.bookTitle}>
+              <Typography gutterBottom variant="h5" component="h2">
+                {book.title.length > threshold.title ? book.title.slice(0, threshold.title) + '...' : book.title}
+              </Typography>
+            </Box>
+            <Box className={classes.bookAuthor}>
+              <Typography variant="h6" component="h3">
+                作者:
+                {`${author.length > threshold.author ? author.slice(0, threshold.author) + '...' : author}${
+                  book.authors.length > 1 ? ' 他' : ''
+                }`}
+              </Typography>
+            </Box>
+            <Box className={classes.bookTag}>
               {/* TODO: 各タグにそのタグのフィルタした結果の表示をリンクさせる。 */}
-              ジャンル:
+              タグ:
               {book.tag.length > threshold.tag
                 ? book.tag.slice(0, threshold.tag).join(', ') + ' 他'
                 : book.tag.join(', ')}
-            </Typography>
+            </Box>
+            <div style={{ flexGrow: 1 }}></div>
+            <Box display="flex" flexDirection="row-reverse">
+              <Box className={classes.bookPrice}>{book.price}円</Box>
+            </Box>
           </CardContent>
         </CardActionArea>
       </Card>
