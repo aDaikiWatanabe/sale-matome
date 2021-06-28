@@ -87,20 +87,7 @@ const SearchBar: React.FC = () => {
 
   return (
     <AppBar position="static">
-      <Toolbar id="back-to-top-anchor">
-        <Box className={classes.search}>
-          <Box className={classes.searchIcon}>
-            <SearchIcon />
-          </Box>
-          <InputBase
-            placeholder="Search ..."
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput,
-            }}
-            onChange={handleSearchInputChange}
-          />
-        </Box>
+      <Toolbar>
         <div style={{ flexGrow: 1 }}></div>
         <Box className={classes.select}>
           <Typography className={classes.selectTitle}>表示サイト:</Typography>

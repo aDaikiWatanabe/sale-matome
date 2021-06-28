@@ -8,8 +8,9 @@ import BackToTopButton from './component/BackToTopButton'
 //TODO: styleで指定する
 const App: React.FC = () => {
   return (
-    <Box className="App">
+    <Box className="App" id="back-to-top-anchor">
       <Header />
+      <div id="back-to-top-anchor" />
       <Box className="Body" mt="6rem" mx="auto" p="2rem">
         <SearchBar />
         <Paper style={{ padding: '1rem' }}>
