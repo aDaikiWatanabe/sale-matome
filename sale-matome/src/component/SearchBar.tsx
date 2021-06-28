@@ -1,6 +1,5 @@
-import { Box, InputBase, AppBar, Toolbar, FormControl, MenuItem, Typography, Select } from '@material-ui/core'
+import { Box, AppBar, Toolbar, FormControl, MenuItem, Typography, Select } from '@material-ui/core'
 import { makeStyles, Theme, createStyles, fade } from '@material-ui/core/styles'
-import SearchIcon from '@material-ui/icons/Search'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSearchFilter, setSiteFilter, setSortValue, setSortOrder } from '../actions/visibilityFilter'
 import { siteFilterType, sortOrderType, sortValueType } from '../models/VisibilityFilter'
@@ -72,9 +71,6 @@ const SearchBar: React.FC = () => {
   const dispatch = useDispatch()
   const classes = useStyles()
 
-  const handleSearchInputChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    dispatch(setSearchFilter(event.target.value as string))
-  }
   const handleFilterChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     dispatch(setSiteFilter(event.target.value as siteFilterType))
   }
@@ -88,19 +84,7 @@ const SearchBar: React.FC = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Box className={classes.search}>
-          <Box className={classes.searchIcon}>
-            <SearchIcon />
-          </Box>
-          <InputBase
-            placeholder="Search ..."
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput,
-            }}
-            onChange={handleSearchInputChange}
-          />
-        </Box>
+        <div style={{ flexGrow: 1 }}></div>
         <Box className={classes.select}>
           <Typography className={classes.selectTitle}>表示サイト:</Typography>
           <FormControl component="fieldset">

@@ -20,7 +20,7 @@ def app(environ, start_response):
           "purchaseLink": "https://book.dmm.com/detail/b900rkds02366/",
           "site": "dmm",
           "title": "ブルーピリオド(1)",
-          "author": "山口つばさ",
+          "authors": ["山口つばさ"],
           "price": 660,
           "imageLink": None,
           "tag": ["青年コミック", "ヒューマンドラマ"],
@@ -32,7 +32,7 @@ def app(environ, start_response):
           "purchaseLink": "https://book.dmm.com/detail/b999asqex03051/",
           "site": "dmm",
           "title": "薬屋のひとりごと 1巻",
-          "author": "ねこクラゲ  七緒一綺  しのとうこ  日向夏（ヒーロー文庫/主婦の友社刊）",
+          "authors": ["ねこクラゲ", "七緒一綺", "しのとうこ", "日向夏（ヒーロー文庫/主婦の友社刊）"],
           "price": 618,
           "imageLink": None,
           "tag": ["少女コミック", "ミステリー・サスペンス", "歴史・時代劇・戦記"],
@@ -44,7 +44,7 @@ def app(environ, start_response):
           "purchaseLink": "https://book.dmm.com/detail/b999asqex03506/",
           "site": "dmm",
           "title": "神様に拾われたなんとかかんとか2",
-          "author": "Roy 蘭々 りりんら",
+          "authors": ["Roy", "蘭々", "りりんら"],
           "price": 309,
           "imageLink": None,
           "tag": ["少年コミック", "日常", "異世界系", "ルポ・エッセイ・自叙伝", "ファンタジー"],
@@ -56,7 +56,7 @@ def app(environ, start_response):
           "purchaseLink": "http://example.com",
           "site": "dmm",
           "title": "ブルーピリオド(1)",
-          "author": "John Do",
+          "authors": ["Roy", "蘭々", "りりんら"],
           "price": 2300,
           "imageLink": None,
           "tag": ["SF", "ラブコメ"],
@@ -68,7 +68,7 @@ def app(environ, start_response):
           "purchaseLink": "http://example.com",
           "site": "dmm",
           "title": "ブルーピリオド(1)",
-          "author": "John Do",
+          "authors": ["Roy", "蘭々", "りりんら"],
           "price": 2300,
           "imageLink": None,
           "tag": ["SF", "ラブコメ"],
@@ -77,37 +77,37 @@ def app(environ, start_response):
       {
         "data": {
           "id": "6",
-          "purchaseLink": "http://example.com",
+          "purchaseLink": "https://book.dmm.com/detail/b900rkds02366/",
           "site": "dmm",
           "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
+          "authors": ["山口つばさ"],
+          "price": 660,
           "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
+          "tag": ["青年コミック", "ヒューマンドラマ"],
         }
       },
       {
         "data": {
           "id": "7",
-          "purchaseLink": "http://example.com",
+          "purchaseLink": "https://book.dmm.com/detail/b999asqex03051/",
           "site": "dmm",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
+          "title": "薬屋のひとりごと 1巻",
+          "authors": ["ねこクラゲ", "七緒一綺", "しのとうこ", "日向夏（ヒーロー文庫/主婦の友社刊）"],
+          "price": 618,
           "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
+          "tag": ["少女コミック", "ミステリー・サスペンス", "歴史・時代劇・戦記"],
         }
       },
       {
         "data": {
           "id": "8",
-          "purchaseLink": "http://example.com",
+          "purchaseLink": "https://book.dmm.com/detail/b999asqex03506/",
           "site": "dmm",
-          "title": "dmmブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
+          "title": "神様に拾われたなんとかかんとか2",
+          "authors": ["Roy", "蘭々", "りりんら"],
+          "price": 309,
           "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
+          "tag": ["少年コミック", "日常", "異世界系", "ルポ・エッセイ・自叙伝", "ファンタジー"],
         }
       },
       {
@@ -115,8 +115,8 @@ def app(environ, start_response):
           "id": "9",
           "purchaseLink": "http://example.com",
           "site": "dmm",
-          "title": "dmmブルーピリオド(1)",
-          "author": "John Do",
+          "title": "ブルーピリオド(1)",
+          "authors": ["Roy", "蘭々", "りりんら"],
           "price": 2300,
           "imageLink": None,
           "tag": ["SF", "ラブコメ"],
@@ -127,248 +127,8 @@ def app(environ, start_response):
           "id": "10",
           "purchaseLink": "http://example.com",
           "site": "dmm",
-          "title": "dmmブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "11",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
-          "title": "kindleブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "12",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
-          "title": "kindleブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "13",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
-          "title": "kindleブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "14",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
           "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "15",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "16",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "17",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
-          "title": "kindleブルーピリオド(1)",
-          "author": "John kindle Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "18",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "19",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "20",
-          "purchaseLink": "http://example.com",
-          "site": "kindle",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "21",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "rakutenブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "22",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "rakutenブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "23",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "rakutenブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "24",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "rakutenブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "25",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "26",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "ブルーピリオド(1)",
-          "author": "John rakuten Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "27",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "28",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "29",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
-          "price": 2300,
-          "imageLink": None,
-          "tag": ["SF", "ラブコメ"],
-        }
-      },
-      {
-        "data": {
-          "id": "30",
-          "purchaseLink": "http://example.com",
-          "site": "rakuten",
-          "title": "ブルーピリオド(1)",
-          "author": "John Do",
+          "authors": ["Roy", "蘭々", "りりんら"],
           "price": 2300,
           "imageLink": None,
           "tag": ["SF", "ラブコメ"],

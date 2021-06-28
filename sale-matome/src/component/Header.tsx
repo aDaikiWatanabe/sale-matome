@@ -1,4 +1,4 @@
-import { AppBar, Box } from '@material-ui/core'
+import { Box, AppBar } from '@material-ui/core'
 
 const Header: React.FC = () => {
   return (

@@ -1,8 +1,9 @@
 import { siteType } from './siteType'
 
 export interface Book {
+  id: string
   title: string
-  author: string
+  authors: string[]
   tag: string[]
   purchaseLink: string
   site: siteType

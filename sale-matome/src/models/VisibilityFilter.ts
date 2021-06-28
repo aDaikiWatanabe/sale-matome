@@ -7,6 +7,8 @@ export type sortOrderType = -1 | 1
 export interface VisibilityFilter {
   siteFilter: siteFilterType
   searchFilter: string
+  searchAuthorFilter: string
   sortValue: sortValueType
   sortOrder: sortOrderType
+  tagFilter: Set<string>
 }

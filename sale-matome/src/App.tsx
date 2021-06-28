@@ -1,17 +1,24 @@
 import './App.css'
 import Header from './component/Header'
 import BookList from './component/BookList'
-import SearchBar from './component/SearchBar'
-import { Box } from '@material-ui/core'
+// import SearchBar from './component/SearchBar'
+import FilterBox from './component/FilterBox'
+import { Box, Paper } from '@material-ui/core'
+import BackToTopButton from './component/BackToTopButton'
 
+//TODO: styleで指定する
 const App: React.FC = () => {
   return (
     <Box className="App">
       <Header />
-      <Box className="Body" mt="8rem" mx="auto">
-        <SearchBar />
-        <BookList />
+      <div id="back-to-top-anchor" />
+      <Box className="Body" mt="6rem" mx="auto" p="2rem">
+        <FilterBox />
+        <Paper style={{ padding: '1rem' }}>
+          <BookList />
+        </Paper>
       </Box>
+      <BackToTopButton />
     </Box>
   )
 }
