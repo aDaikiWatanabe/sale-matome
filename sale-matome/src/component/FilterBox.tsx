@@ -116,7 +116,6 @@ const FilterBox: React.FC = () => {
     } else {
       dispatch(removeTagFilter(event.target.name))
     }
-    console.log(selectedVisibilityFilter.tagFilter)
   }
 
   return (
