@@ -1,6 +1,5 @@
-import { Box, InputBase, AppBar, Toolbar, FormControl, MenuItem, Typography, Select } from '@material-ui/core'
+import { Box, AppBar, Toolbar, FormControl, MenuItem, Typography, Select } from '@material-ui/core'
 import { makeStyles, Theme, createStyles, fade } from '@material-ui/core/styles'
-import SearchIcon from '@material-ui/icons/Search'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSearchFilter, setSiteFilter, setSortValue, setSortOrder } from '../actions/visibilityFilter'
 import { siteFilterType, sortOrderType, sortValueType } from '../models/VisibilityFilter'
@@ -72,9 +71,6 @@ const SearchBar: React.FC = () => {
   const dispatch = useDispatch()
   const classes = useStyles()
 
-  const handleSearchInputChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    dispatch(setSearchFilter(event.target.value as string))
-  }
   const handleFilterChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     dispatch(setSiteFilter(event.target.value as siteFilterType))
   }

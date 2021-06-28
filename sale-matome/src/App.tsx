@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './component/Header'
 import BookList from './component/BookList'
-import SearchBar from './component/SearchBar'
+// import SearchBar from './component/SearchBar'
 import FilterBox from './component/FilterBox'
 import { Box, Paper } from '@material-ui/core'
 import BackToTopButton from './component/BackToTopButton'
