@@ -14,7 +14,6 @@ const App: React.FC = () => {
       <div id="back-to-top-anchor" />
       <Box className="Body" mt="6rem" mx="auto" p="2rem">
         <FilterBox />
-        {/* <SearchBar /> */}
         <Paper style={{ padding: '1rem' }}>
           <BookList />
         </Paper>
