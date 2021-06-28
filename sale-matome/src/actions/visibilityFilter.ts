@@ -5,6 +5,8 @@ export const Type = {
   SET_SITE_FILTER: 'SET_SITE_FILTER',
   SET_SORT_VALUE: 'SET_SORT_VALUE',
   SET_SORT_ORDER: 'SET_SORT_ORDER',
+  ADD_TAG_FILTER: 'ADD_TAG_FILTER',
+  REMOVE_TAG_FILTER: 'REMOVE_TAG_FILTER',
 } as const
 
 type ActionCreate<TP> = (payload: TP) => { type: string; payload: TP }
@@ -29,7 +31,19 @@ export const setSortOrder: ActionCreate<sortOrderType> = (sortOrder: sortOrderTy
   payload: sortOrder,
 })
 
+export const addTagFilter: ActionCreate<string> = (tag: string) => ({
+  type: Type.ADD_TAG_FILTER,
+  payload: tag,
+})
+
+export const removeTagFilter: ActionCreate<string> = (tag: string) => ({
+  type: Type.REMOVE_TAG_FILTER,
+  payload: tag,
+})
+
 export type VisibilityFilterAction =
   | ReturnType<typeof setSearchFilter>
   | ReturnType<typeof setSortValue>
   | ReturnType<typeof setSortOrder>
+  | ReturnType<typeof addTagFilter>
+  | ReturnType<typeof removeTagFilter>

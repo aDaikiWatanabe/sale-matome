@@ -1,9 +1,20 @@
-import { Box, InputBase, AppBar, Toolbar, FormControl, MenuItem, Paper, Typography, Select } from '@material-ui/core'
+import { Checkbox } from '@material-ui/core'
+import { Box, InputBase, FormControl, FormControlLabel, MenuItem, Paper, Typography, Select } from '@material-ui/core'
 import { makeStyles, Theme, createStyles, fade } from '@material-ui/core/styles'
 import SearchIcon from '@material-ui/icons/Search'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setSearchFilter, setSiteFilter, setSortValue, setSortOrder } from '../actions/visibilityFilter'
+import {
+  setSearchFilter,
+  setSiteFilter,
+  setSortValue,
+  setSortOrder,
+  addTagFilter,
+  removeTagFilter,
+} from '../actions/visibilityFilter'
 import { siteFilterType, sortOrderType, sortValueType } from '../models/VisibilityFilter'
+import { getBooks } from '../selectors/book'
 import { getVisibilityFilter } from '../selectors/visibilityFilter'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -67,9 +78,21 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 const FilterBox: React.FC = () => {
+  const [tags, setTags] = useState(new Set<string>())
   const selectedVisibilityFilter = useSelector(getVisibilityFilter)
+  const allBooks = useSelector(getBooks)
   const dispatch = useDispatch()
   const classes = useStyles()
+
+  useEffect(() => {
+    const newTags = new Set<string>()
+    allBooks.map(book => {
+      book.tag.map(tag => {
+        newTags.add(tag)
+      })
+    })
+    setTags(newTags)
+  }, [allBooks])
 
   const handleSearchInputChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     dispatch(setSearchFilter(event.target.value as string))
@@ -82,6 +105,14 @@ const FilterBox: React.FC = () => {
   }
   const handleSortOrderChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     dispatch(setSortOrder(event.target.value as sortOrderType))
+  }
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.checked) {
+      dispatch(addTagFilter(event.target.name))
+    } else {
+      dispatch(removeTagFilter(event.target.name))
+    }
+    console.log(selectedVisibilityFilter.tagFilter)
   }
 
   return (
@@ -147,6 +178,18 @@ const FilterBox: React.FC = () => {
             <MenuItem value={1}>昇順</MenuItem>
           </Select>
         </FormControl>
+        <Box>
+          タグ：
+          {Array.from(tags.values()).map(tag => {
+            return (
+              <FormControlLabel
+                control={<Checkbox name={tag} onChange={handleCheckboxChange} />}
+                label={tag}
+                key={tag}
+              />
+            )
+          })}
+        </Box>
       </Box>
     </Paper>
   )

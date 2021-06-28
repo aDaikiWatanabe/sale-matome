@@ -15,7 +15,8 @@ export const getBooksByVisibilityFilter = (state: RootState) => {
     .filter(
       (book: Book) =>
         book.title.includes(filter.searchFilter) &&
-        (filter.siteFilter === 'all' ? true : book.site === filter.siteFilter)
+        (filter.siteFilter === 'all' ? true : book.site === filter.siteFilter) &&
+        (filter.tagFilter.size === 0 ? true : book.tag.some(tag => Array.from(filter.tagFilter).includes(tag)))
     )
     .sort((a: Book, b: Book) => {
       switch (filter.sortValue as string) {
