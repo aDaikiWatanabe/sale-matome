@@ -4,8 +4,10 @@ import { VisibilityFilter } from '../models/VisibilityFilter'
 const initVisibilityFilter: VisibilityFilter = {
   siteFilter: 'all',
   searchFilter: '',
+  searchAuthorFilter: '',
   sortValue: 'default',
   sortOrder: 1,
+  tagFilter: [],
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
